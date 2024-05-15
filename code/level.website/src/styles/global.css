@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: "Sanchez";
+    src: url(./Sanchez-Regular.ttf);
+}
+
+@layer base {
+
+    body {
+        @apply bg-black text-neutral-400
+    }
+
+    input {
+        @apply bg-[#1B1F27] border-0 p-2 rounded-md focus:outline-none focus:ring-0 text-neutral-400
+    }
+
+    button {
+        @apply bg-[#1B1F27] border-0 p-2 rounded-md focus:outline-none focus:ring-0 text-white px-2.5 bg-neutral-600 hover:bg-neutral-500
+    }
+
+    a {
+        @apply hover:text-neutral-400
+    }
+
+    h1 {
+        @apply text-4xl bg-gradient-to-r from-violet-400 to-violet-800 text-transparent bg-clip-text
+    }
+}
