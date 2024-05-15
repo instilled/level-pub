@@ -14,7 +14,7 @@
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "typecheck": "tsc --noEmit",
-    "deploy": "gatsby build --prefix-paths && gh-pages -d public --repo git@github.com:instilled/level-pub.git"
+    "deploy": "gatsby build --prefix-paths && gh-pages -d public --cname levelai.app --repo git@github.com:instilled/level-pub.git"
   },
   "dependencies": {
     "@mobile-reality/gatsby-plugin-gdpr-cookies": "^0.2.1",

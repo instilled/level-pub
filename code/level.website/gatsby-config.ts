@@ -1,7 +1,6 @@
 import type {GatsbyConfig} from "gatsby";
 
 const config: GatsbyConfig = {
-    pathPrefix: "/level-pub",
     siteMetadata: {
         title: `Level - AI Assistant`,
         siteUrl: `https://levelai.app`
@@ -31,8 +30,11 @@ const config: GatsbyConfig = {
                     anonymize: true, // default
                     allowAdFeatures: false // default
                 },
+                googleTag: {
+                    trackingIds: ['G-FHJRGSGRNJ'],
+                    cookieName: 'level-analytics-gt'
+                },
             },
-            environments: ['production', 'development']
         },
         {
             resolve: `gatsby-plugin-manifest`,
