@@ -1,14 +1,15 @@
 import * as React from "react"
 import {HeadFC, PageProps} from "gatsby"
 import {MyPage} from "../comps/MyPage";
-import {useForm} from "@formspree/react";
-
+import {useForm, ValidationError} from "@formspree/react";
 import level_img from "../images/level.png"
 
 
 const IndexPage: React.FC<PageProps> = () => {
 
     const [submitState, submitForm, reset] = useForm('mnqerldw');
+
+
     // useEffect(() => {
     //     document.cookie = "level-analytics-ga-consent=true";
     //     initializeAndTrack(useLocation())
@@ -36,7 +37,8 @@ const IndexPage: React.FC<PageProps> = () => {
                 </div>
                 <div className="mt-10 w-full text-center sm:text-left">
                     <form onSubmit={submitForm}>
-                        <input id="email" type="email" name="email" placeholder="Your email" className="w-4/5 sm:w-1/4"></input>
+                        <input id="email" type="email" name="email" placeholder="Your email" className="w-4/5 sm:w-1/4" required={true} />
+                        <ValidationError prefix="Email" field="email" errors={submitState.errors} />
                         <button type="submit"
                                 className="ml-2 bg-gradient-to-br from-gray-600 to-gray-700 hover:from-gray-400 hover:to-gray-400 mt-2 sm:mt-0"
                                 onClick={validateForm}
