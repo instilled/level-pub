@@ -25,7 +25,11 @@
         @apply hover:text-neutral-400
     }
 
-    h1 {
+    h1, h2 {
         @apply text-4xl bg-gradient-to-r from-violet-400 to-violet-800 text-transparent bg-clip-text
+    }
+
+    h2 {
+        @apply text-xl
     }
 }
